@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/upload_from_gallery"
+        android:icon="@drawable/ic_baseline_add_photo_alternate_24"
+        android:iconTint="#B1ACAC"
+        android:title="From gallery" />
+    <item
+        android:id="@+id/upload_from_camera"
+        android:icon="@drawable/ic_baseline_add_a_photo_24"
+        android:iconTint="#B1ACAC"
+        android:title="From camera" />
+</menu>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ChatGroupFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/rv"
+        app:layout_constraintBottom_toBottomOf="@id/rv"
+        android:src="@drawable/wallpaper"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/back_b"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+        app:layout_constraintBottom_toBottomOf="@id/card_profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card_profile" />
+
+    <ImageButton
+        android:id="@+id/list_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_list_24"
+        app:layout_constraintBottom_toBottomOf="@id/card_profile"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card_profile" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_profile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toRightOf="@id/back_b"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/card_profile"
+        app:layout_constraintBottom_toTopOf="@id/subscribers"
+        app:layout_constraintLeft_toRightOf="@id/card_profile"
+        app:layout_constraintTop_toTopOf="@id/card_profile" />
+
+    <TextView
+        android:id="@+id/subscribers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/card_profile"
+        app:layout_constraintLeft_toLeftOf="@id/group_name"
+        app:layout_constraintTop_toBottomOf="@id/group_name" />
+
+    <EditText
+        android:id="@+id/your_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_b"
+        android:hint="Your message..."
+        android:paddingStart="25dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="60dp"
+        android:paddingRight="60dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/your_message"
+        app:layout_constraintTop_toBottomOf="@id/card_profile" />
+
+    <ImageView
+        android:id="@+id/send_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:foreground="?actionBarItemBackground"
+        android:src="@drawable/ic_baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="@id/your_message"
+        app:layout_constraintRight_toRightOf="@id/your_message"
+        app:layout_constraintTop_toTopOf="@id/your_message" />
+</androidx.constraintlayout.widget.ConstraintLayout>
